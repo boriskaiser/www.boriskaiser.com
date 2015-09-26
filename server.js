@@ -1,6 +1,7 @@
 var express = require('express');
 
 express()
+    .disable('x-powered-by')
     .set('view engine', 'ejs')
     .use(express.static('./public'))
     .get('*', function (req, res) {
