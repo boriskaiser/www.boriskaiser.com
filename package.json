@@ -1,0 +1,35 @@
+{
+  "name": "www.boriskaiser.com",
+  "version": "1.0.0",
+  "description": "Source of my site www.boriskaiser.com",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boriskaiser/www.boriskaiser.com.git"
+  },
+  "author": {
+    "name": "Boris Kaiser",
+    "email": "mail@boriskaiser.com",
+    "url": "www.boriskaiser.com"
+  },
+  "license": "LicenseRef-LICENSE",
+  "bugs": {
+    "url": "https://github.com/boriskaiser/www.boriskaiser.com/issues"
+  },
+  "homepage": "https://github.com/boriskaiser/www.boriskaiser.com#readme",
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.0.1",
+    "reactify": "^1.1.1",
+    "through2": "^2.0.0"
+  },
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3"
+  }
+}
