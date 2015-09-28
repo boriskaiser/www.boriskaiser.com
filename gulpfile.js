@@ -17,7 +17,7 @@ gulp.task('browserify', function () {
                     next(null, file);
                 });
         }))
-        .pipe(concat('bk.js'))
+        .pipe(concat('only.js'))
         .pipe(gulp.dest('public'))
 });
 
