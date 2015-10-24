@@ -1,12 +1,24 @@
+var path = require('path');
 var express = require('express');
+var helmet = require('helmet');
 
-express()
-    .disable('x-powered-by')
+var app = express();
+
+var isProduction = process.env.NODE_ENV === 'production';
+var port = isProduction ? process.env.PORT : 3000;
+
+var publicPath = path.resolve(__dirname, 'public');
+
+app
+    .use(helmet())
+
     .set('view engine', 'ejs')
-    .use(express.static('./public'))
+    .use(express.static(publicPath))
+
     .get('*', function (req, res) {
         res.render('index');
     })
-    .listen(3000, function () {
-        console.log('App listening at http://localhost:3000');
+
+    .listen(port, function () {
+        console.log('App listening at http://localhost:' + port);
     });
